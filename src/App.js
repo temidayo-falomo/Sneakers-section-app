@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import Page from './components/page/Page';
+import { sliderData } from './components/sliderData';
+import { useState } from 'react';
 
 function App() {
+  const [value, setValue] = useState(1);
+  const [price, setPrice] = useState(125.01);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar price={price} setPrice={setPrice} value={value} setValue={setValue}/>
+      <Page slides={sliderData} value={value} setValue={setValue} price={price} setPrice={setPrice}/>
     </div>
   );
 }

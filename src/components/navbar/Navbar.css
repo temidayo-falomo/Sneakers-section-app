@@ -1,0 +1,165 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.nav-container {
+    padding: 30px 0;
+    width: 90%;
+    /* border: 2px cyan solid; */
+    border-bottom: 1px rgb(197, 197, 197) solid;
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-avatar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.avatar {
+    width: 40px;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    border: 3px orange solid;
+    border-radius: 50px;
+}
+
+.hamburger-logo {
+    display: flex;
+    gap: 10px;
+    /* border: 2px red solid; */
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.menu-item {
+    display: none;
+}
+
+.avatar-drop {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px cyan solid; */
+    align-items: flex-end;
+    max-width: 80%;
+}
+
+.cart {
+  position: static;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cart span {
+    font-size: 12px;
+    background-color:  hsl(26, 100%, 55%);
+    border-radius: 50px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.cart-basket {
+    cursor: pointer;
+}
+
+.cart-basket:hover {
+    font-weight: bolder;
+}
+
+.menu-links {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+ul li a {
+    color:  hsl(0, 0%, 0%);
+}
+
+ul li a:hover {
+    border-bottom: 4px  hsl(26, 100%, 55%) solid;
+    padding-bottom: 35px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .menu-item {
+        display: block;
+        z-index: 11111;
+    }
+
+    .hamburger-logo {
+        flex-direction: column;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-links.active {
+        flex-direction: column;
+        z-index: 1111;
+        margin-bottom: -190px;
+        background-color: white;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        align-items: center;
+        width: 60%;
+        text-align: left;
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 9px 32px 5px;
+        padding-top: 100px;
+        transition: all 0.5s ease;
+        opacity: 1;
+        left: 0;
+    }
+
+    .menu-links {
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        top: 100px;
+        position: absolute;
+    }
+
+    ul li a {
+        font-weight: bold;
+    }
+
+    ul li a:hover {
+        padding-bottom: 10px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+
+}
