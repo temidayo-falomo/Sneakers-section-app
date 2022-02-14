@@ -1,7 +1,8 @@
-import React from 'react'
-import './Page.css'
-import { useState } from 'react'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+import React from 'react';
+import './Page.css';
+import { useState } from 'react';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai'
 import { sliderData } from '../sliderData';
 
 
@@ -73,8 +74,8 @@ function Page({slides, value, setValue, price, setPrice}) {
 
 
           <div className='arrows'>
-            <img src='./images/icon-previous.svg' alt='' className='arrow' onClick={prevSlide}/>
-            <img src='./images/icon-next.svg' alt='' className='arrow' onClick={nextSlide}/>
+            <AiOutlineLeft className='arrow' onClick={prevSlide}/>
+            <AiOutlineRight className='arrow' onClick={nextSlide}/>
           </div>
 
 

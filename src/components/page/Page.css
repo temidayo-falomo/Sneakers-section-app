@@ -250,9 +250,13 @@ button {
     
     .arrow {
         background-color: white;
-        padding: 20px;
         border-radius: 50px;
         cursor: pointer;
+        z-index: 111;
+        font-size: 50px;
+        color: black;
+        padding: 10px;
+        font-weight: 800;
     }
 
     .slider {
